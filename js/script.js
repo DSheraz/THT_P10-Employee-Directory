@@ -123,7 +123,8 @@ function searchEmployee() {
     if (name[i].textContent.toLowerCase().indexOf(search.value.toLowerCase()) ==-1||
       name[i].textContent.toUpperCase().indexOf(search.value.toUpperCase()) ==-1) {
       employeeBox[i].style.display = "none";
-    } else {
+    } else if (name[i].textContent.toLowerCase().indexOf(search.value.toLowerCase()) !=-1||
+                name[i].textContent.toUpperCase().indexOf(search.value.toUpperCase()) !=-1) {
       employeeBox[i].style.display = "flex";
     }
   }
